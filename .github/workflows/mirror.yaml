@@ -1,0 +1,17 @@
+name: mirror
+
+on: push
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: download artifact
+      run: curl https://silenthillmuseum.org/SLUS_202.28.json -o SLUS_202.28_report.json
+
+    - name: upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: SLUS_202.28_report
+        path: SLUS_202.28_report.json
