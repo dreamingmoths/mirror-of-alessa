@@ -1,6 +1,6 @@
 name: mirror
 
-on: workflow_dispatch
+on: push
 
 jobs:
   mirror:
