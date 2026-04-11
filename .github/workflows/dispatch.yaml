@@ -10,6 +10,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
+        with:
+          ssh-key: ${{ SECRETS.DEPLOY_KEY }}
 
       - run: |
           git config user.name "alessa"
